@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="serviciosForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">SKU</label>
+        <input type="text" class="form-control" formControlName="sku" #sku />
+      </div>
+      <div class="form-group">
+        <button (click)="consultarPorSku(sku.value)" type="submit" class="btn btn-primary">
+          Consultar por SKU
+        </button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <td>Tipo Departamento</td>
+          <td>SKU</td>
+          <td>Intento</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let departamento of departamentos">
+          <td>{{ departamento.tipoDepartamento }}</td>
+          <td>{{ departamento.sku }}</td>
+          <td>{{ departamento.intento }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

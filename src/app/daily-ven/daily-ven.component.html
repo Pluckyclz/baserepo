@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="formVen">
+      <div class="form-group">
+        <label class="">Loc</label>
+        <input type="text" class="" formControlName="Local" #Local />
+        <label class="">Art</label>
+        <input type="text" class="" formControlName="Local" #Art />
+        <label class="">Prec B</label>
+        <input type="text" class="" formControlName="Local" #PrecB />
+        <label class="">Prec L</label>
+        <input type="text" class="" formControlName="Local" #PrecL />
+        <label class="">Tot</label>
+        <input type="text" class="" formControlName="Local" #Tot />
+      </div>
+      <div class="form-group">
+        <button (click)="addVen(Local.value,Art.value,PrecB.value,PrecL.value,Tot.value)" type="submit"
+          class="btn btn-primary">
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
